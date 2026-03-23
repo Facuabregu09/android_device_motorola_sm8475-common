@@ -278,7 +278,7 @@ ro.vendor.use_data_netmgrd=true
 # SOC
 ro.hardware.soc.manufacturer=qcom
 ro.soc.manufacturer=QTI
-ro.soc.model=SM7435
+ro.soc.model=SM8475
 
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE

@@ -510,8 +510,8 @@ function sdm660_sched_schedutil_dcvs() {
 
     #if the kernel version >=4.19,set input_boost_freq accordingly
     if [ $KernelVersionA -ge 4 ] && [ $KernelVersionB -ge 19 ]; then
-        echo "0:1401600" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
-        echo 40 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
+        echo "0:1804800" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
+        echo 128 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
     else
         echo "0:1401600" > /sys/module/cpu_boost/parameters/input_boost_freq
         echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms

@@ -48,7 +48,7 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.3-impl \
     audioadsprpcd \
     audio.bluetooth.default \
-    audio.primary.taro \
+    audio.primary.taro_vendor \
     audio.r_submix.default \
     audio.usb.default \
     lib_bt_aptx \
@@ -313,9 +313,7 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils-prd \
     qti_telephony_utils_prd.xml \
     telephony-ext
-
-PRODUCT_PACKAGES += \
-    qcrilNrDb_vendor
+# PRODUCT_PACKAGES += qcrilNrDb_vendor  # Disabled: generate_qcril_db tool source missing
 
 PRODUCT_BOOT_JARS += \
     telephony-ext

@@ -4,3 +4,5 @@ type persist_chargeonly_file, file_type, data_file_type;
 
 # Allow vendor_init to write cpufreq min_freq (performance tuning)
 allow vendor_init sysfs_devices_system_cpu:file w_file_perms;
+type vendor_sysfs_touchpanel, fs_type, sysfs_type;
+type fsg_file, fs_type;

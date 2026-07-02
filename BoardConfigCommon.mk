@@ -38,7 +38,7 @@ AUDIO_FEATURE_ENABLED_INSTANCE_ID := true
 AUDIO_FEATURE_ENABLED_PAL_HIDL := true
 AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
 BOARD_SUPPORTS_OPENSOURCE_STHAL := true
-TARGET_USES_QCOM_MM_AUDIO := true
+TARGET_USES_QCOM_MM_AUDIO := false
 TARGET_PAL_SPKR_PROTECTION_PATH := /mnt/vendor/persist/factory/audio/audio.cal
 
 # Bootloader
@@ -220,3 +220,9 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
 include vendor/motorola/sm8475-common/BoardConfigVendor.mk
+
+# Force QCPATH-gated audio PAL modules to build (workaround, no CAF proprietary tree needed)
+# QCPATH := device/motorola/sm8475-common
+AUDIO_FEATURE_ENABLED_AGM_HIDL := true
+BUILD_BROKEN_DUP_RULES := true
+AUDIO_USE_STUB_HAL := true
